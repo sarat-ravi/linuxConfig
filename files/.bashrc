@@ -112,54 +112,6 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-# temporary aliases. DELETE them after expiration
-#alias sarat="cd ~/Documents/Intersect/"
-#alias sarat="cd ~/lm-backend/www/ && source ~/Software/pythonVirtualEnvs/livemagic/bin/activate"
-#alias vfp="cd ~/lm-vfp/tools/markup_tool/"
-alias sarat="cd ~/lm-vfp/intersect/tools/vfp/"
-alias boost="cd ~/Desktop/pyboost/projects/"
-alias vfp="cd ~/lm-vfp/vfp/"
-alias tools="cd ~/lm-vfp/intersect/tools/"
-alias optvfp="cd /opt/vfp/"
-alias lmcode="cd ~/lm-code/dj_www/ && source ~/Software/pythonVirtualEnvs/livemagic/bin/activate"
-alias intersect="source ~/Software/intersect_venv/bin/activate && cd ~/Documents/Intersect/intersect"
-alias markdown="/Applications/Mou.app/Contents/MacOS/Mou"
-
-alias python3="python3.3"
-
-#default x11 forwarding
-#alias ssh="ssh -X"
-alias push="bash .push.sh"
-
-#list all directory contents
-alias lsa="ls -a"
-
-# The day will come, when this will bite me back
-alias sl="ls"
-alias lls="clear && ls"
-
-#common ssh
-alias livemagic.tv="ssh saratt@replaydev.livemagic.tv"
-alias saratxps="ssh -X saratt@saratxps.myftp.biz"
-alias sarattallamraju.com="ssh -X saratta1@sarattallamraju.com"
-
-alias ndk-build="/opt/android-ndk-r7b/ndk-build"
-alias rsync="rsync --progress"
-alias cleandir="rm *.pyc"
-
-alias ..="cd .."
-alias documents="cd ~/Documents"
-alias root="cd ../../../../../../"
-alias downloads="cd ~/Downloads"
-alias permission="stat -c '%A %a %n'"
-alias extract="tar xvzf"
-alias filesize="du -hs"
-alias :q="exit"
-alias opennlp="~/Documents/Intersect/src/util/opennlp_bin/bin/opennlp"
-alias virtualenvlivemagic="source ~/Software/pythonVirtualEnvs/livemagic/bin/activate"
-#alias open="gnome-open"
-alias haraka="/home/saratt/bin/haraka"
-alias django="ipython manage.py $1"
 set -o emacs
 
 
