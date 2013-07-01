@@ -7,8 +7,8 @@ export HISTCONTROL=ignoredups:ignorespace
 
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-export HISTSIZE=10000000000000000
-export HISTFILESIZE=200000000000000000
+export HISTSIZE=100000000000
+export HISTFILESIZE=200000000000
 export HISTFILE=~/.bash_history
 export SAVEHIST=1
 
