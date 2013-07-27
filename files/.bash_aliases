@@ -5,8 +5,12 @@ alias sarat="cd ~/lm-vfp/experiments/videoIPC"
 alias boost="cd ~/Desktop/pyboost/projects/"
 alias vfp="cd ~/lm-vfp/vfp/"
 alias vfpy="cd ~/lm-vfp/vfp/vfpy/"
+alias reco="cd ~/lm-reco/tsr/"
 alias optvfp="cd /opt/vfp/"
+alias intersect="cd ~/intersect/"
 alias markdown="/Applications/Mou.app/Contents/MacOS/Mou"
+
+alias t='python ~/Software/tasks/t.py --task-dir ~/Dropbox/tasks --list tasks'
 
 alias python3="python3.3"
 alias gimp="/Applications/Gimp.app/Contents/MacOS/gimp-2.8"
