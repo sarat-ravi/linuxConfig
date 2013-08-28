@@ -62,6 +62,7 @@ setopt correct
 
 # Customize to your needs...
 export PATH=$PATH:/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/usr/local/go/bin:/Users/saratt/.rvm/bin
+export PATH=/Users/saratt/Software/bin:$PATH
 
 
 if [ $(t | wc -l | sed -e's/ *//') != "0" ]
@@ -79,6 +80,20 @@ function cd()
     else
         builtin cd $param && ls
     fi
+}
+
+export MARKPATH=$HOME/.marks
+function jump { 
+    cd $(readlink -n $MARKPATH/$1) 2>/dev/null || echo "No such mark: $1"
+}
+function mark {
+    mkdir -p $MARKPATH; ln -s $(pwd) $MARKPATH/$1
+}
+function unmark {
+    rm -i $MARKPATH/$1
+}
+function marks {
+    ls -l $MARKPATH | sed 's/ / /g' | cut -d' ' -f9- && echo
 }
 
 if [[ `uname` -eq 'Darwin' ]]
@@ -134,6 +149,10 @@ then
     #export PATH=/opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/bin:$PATH
     export PATH=/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin:$PATH
     # Finished adapting your PATH environment variable for use with MacPorts.
+
+    # add postgres.app path
+    #export PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
+    #export DYLD_FALLBACK_LIBRARY_PATH=$DYLD_FALLBACK_LIBRARY_PATH:/Applications/Postgres.app/Contents/MacOS/lib
 
     # enable bash completion
     #if [ -f `brew --prefix`/etc/bash_completion ]; then
