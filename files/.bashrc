@@ -39,14 +39,6 @@ esac
 # should be on the output of commands, not on the prompt
 #force_color_prompt=yes
 
-# NOTE: This is a hack
-if [ -n "$DYLD_FALLBACK_LIBRARY_PATH" ]; then
-    DYLD_FALLBACK_LIBRARY_PATH=$DYLD_FALLBACK_LIBRARY_PATH:/User/saratt/lm-vfp/intersect/thirdparty/vlfeat-0.9.16/bin/maci64
-else
-    DYLD_FALLBACK_LIBRARY_PATH=/User/saratt/lm-vfp/intersect/thirdparty/vlfeat-0.9.16/bin/maci64
-fi
-export DYLD_FALLBACK_LIBRARY_PATH
-
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
@@ -114,10 +106,6 @@ fi
 
 set -o emacs
 
-
-
-
-
 #add time column to history
 #export HISTTIMEFORMAT='%F %T '
 History () {
@@ -125,97 +113,6 @@ history | awk -v B=`tput smso` -v N=`tput rmso` '{$1= B $1 N} {$2= B $2 N} {$3= 
 history
 }
 
-
-#goes to topmost directory found
-function goto()
-{
-  path=`find ~ -iname $1 | head -n 1`
-  if [ -d "${path}" ]; then
-    echo "";
-  else
-    path=${path%/*};
-  fi
-  cd $path
-}
-
-#displays contents after cd'ing into it
-function cd()
-{
-  param=$* 2> /dev/null
-  if [$param -eq "" 2> ~/.error_log]; then
-    builtin cd ~/ 2> ~/.error_log && ls
-  else
-    builtin cd $param && ls
-  fi
-}
-
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-# Set keyboard rate
-# xset r rate 200 111
-
-if [ "$platform" == 'Darwin' ]; then
-
-  # MAC OSX Specific commands
-
-  #for MAC OSX only
-  function exitt()
-  {
-    #osascript -e 'tell application "Terminal" to quit'
-    exit
-  }
-
-  function activateVirtualEnv()
-  {
-    path="~/Software/pythonVirtualEnvs/$1"; 
-    echo $path;
-    if [ -d "${path}" ]; then
-      echo "The directory exists";
-    else
-      #virtualenv ~/Software/pythonVirtualEnvs/$1;
-      echo "New Virtualenv Created";
-    fi
-    #source "$path/bin/activate";
-    
-  }
-
-  alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --user-data-dir=Library/Application\ Support/Google/Chrome/Default/"
-  alias vlc="/Applications/VLC.app/Contents/MacOS/VLC"
-  #eqv of find . -iname "<str>"
-  alias search="find . -iname "$1""
-
-  export CLICOLOR=1
-  export LSCOLORS=GxFxCxDxBxegedabagaced
-
-
-  # Setting PATH for Python 2.7
-  # The orginal version is saved in .bash_profile.pysave
-  #PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
-  #export PATH
-
-  export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
-
-  ##
-  # Your previous /Users/saratt/.bash_profile file was backed up as /Users/saratt/.bash_profile.macports-saved_2012-06-27_at_14:09:41
-  ##
-
-  # MacPorts Installer addition on 2012-06-27_at_14:09:41: adding an appropriate PATH variable for use with MacPorts.
-  export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-  #export PATH=/opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/bin:$PATH
-  export PATH=/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin:$PATH
-  # Finished adapting your PATH environment variable for use with MacPorts.
-
-  # enable bash completion
-  #if [ -f `brew --prefix`/etc/bash_completion ]; then
-  #    . `brew --prefix`/etc/bash_completion
-  #fi
-
-  #up key autocompletes based on history, 
-  #bind '"\e[A": history-search-backward'
-  #bind '"\e[A": history-search-backward'
-  #bind '"\e[B": "\C-k \C-u"'
-
-
-
+if [ -f ~/.bash_common ]; then
+    . ~/.bash_common
 fi
