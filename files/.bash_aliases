@@ -10,9 +10,9 @@ alias optvfp="cd /opt/vfp/"
 alias intersect="cd ~/intersect/"
 alias markdown="/Applications/Mou.app/Contents/MacOS/Mou"
 
-alias coral="/Users/saratt/lm-reco/reef/coral"
-alias reef="/Users/saratt/lm-reco/reef"
-alias morse="/Users/saratt/lm-reco/reef/taggers/morse"
+alias coral="cd ~/lm-reco/reef/coral"
+alias reef="cd ~/lm-reco/reef"
+alias morse="cd ~/lm-reco/reef/taggers/morse"
 
 alias t='python ~/Software/tasks/t.py --task-dir ~/Dropbox/tasks --list tasks'
 

@@ -4,11 +4,6 @@ export PATH=$PATH:/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bi
 export PATH=/Users/saratt/Software/bin:$PATH
 
 
-if [ $(t | wc -l | sed -e's/ *//') != "0" ]
-then
-    export PS1="[$(t | wc -l | sed -e's/ *//')] $PS1"
-fi
-
 #displays contents after cd'ing into it
 function cd()
 {
