@@ -14,8 +14,8 @@ alias markdown="/Applications/Mou.app/Contents/MacOS/Mou"
 alias coral="cd ~/lm-reco/reef/coral"
 alias reef="cd ~/lm-reco/reef"
 alias morse="cd ~/lm-reco/reef/taggers/morse"
-alias smoke="~/lm-reco/reef/tests/server_smoke"
-alias phstore="~/lm-reco/reef/utils/phstore"
+alias smoke="cd ~/lm-reco/reef/tests/server_smoke"
+alias phstore="cd ~/lm-reco/reef/utils/phstore"
 
 alias t='python ~/Software/tasks/t.py --task-dir ~/Dropbox/tasks --list tasks'
 
