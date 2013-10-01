@@ -11,11 +11,11 @@ alias intersect="cd ~/intersect/"
 alias finances="cd ~/Software/finances/"
 alias markdown="/Applications/Mou.app/Contents/MacOS/Mou"
 
-alias coral="cd ~/reef/reef/coral"
-alias reef="cd ~/reef/reef"
-alias morse="cd ~/reef/reef/taggers/morse"
-alias smoke="cd ~/reef/reef/tests/server_smoke"
-alias phstore="cd ~/reef/reef/utils/phstore"
+alias coral="cd ~/reef/coral"
+alias reef="cd ~/reef"
+alias morse="cd ~/reef/taggers/morse"
+alias smoke="cd ~/reef/tests/server_smoke"
+alias phstore="cd ~/reef/utils/phstore"
 
 alias t='python ~/Software/tasks/t.py --task-dir ~/Dropbox/tasks --list tasks'
 
