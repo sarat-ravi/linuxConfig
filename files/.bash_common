@@ -35,6 +35,8 @@ then
 
     # MAC OSX Specific commands
 
+    # NOTE: Uncomment line to activate virtualenv by default
+    #source ~/Software/sysvenv/bin/activate
 
     #for MAC OSX only
     function exitt()

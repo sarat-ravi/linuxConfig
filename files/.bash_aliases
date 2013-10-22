@@ -4,9 +4,11 @@
 # vfp project
 # -----------------------------------------------------------------
 
-alias vfp="cd ~/radar/vfp/"
-alias vfpy="cd ~/radar/vfp/vfpy/"
+alias radar="cd ~/radar"
+alias vfp="cd ~/radar/Vfpy/"
+alias vfpy="cd ~/radar/Vfpy/vfpy/"
 alias optvfp="cd /opt/vfp/"
+alias smoke="cd ~/radar/tests/smoke/"
 
 # reef project
 # -----------------------------------------------------------------
@@ -14,13 +16,14 @@ alias optvfp="cd /opt/vfp/"
 alias reef="cd ~/reef"
 alias coral="cd ~/reef/coral"
 alias morse="cd ~/reef/taggers/morse"
-alias smoke="cd ~/reef/tests/server_smoke"
+#alias smoke="cd ~/reef/tests/server_smoke"
 alias phstore="cd ~/reef/utils/phstore"
 
 # personal
 # -----------------------------------------------------------------
 
 alias finances="cd ~/Software/finances/"
+alias pyboost="cd ~/Documents/pyboost/"
 
 # tools
 # -----------------------------------------------------------------
