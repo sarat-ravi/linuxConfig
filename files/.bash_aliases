@@ -6,6 +6,8 @@
 
 alias radar="cd ~/radar"
 alias vfp="cd ~/radar/Vfpy/"
+alias lidar="cd ~/radar/Lidar/"
+alias diffractor="cd ~/radar/Diffractor/"
 alias vfpy="cd ~/radar/Vfpy/vfpy/"
 alias optvfp="cd /opt/vfp/"
 alias smoke="cd ~/radar/tests/smoke/"
@@ -16,7 +18,7 @@ alias smoke="cd ~/radar/tests/smoke/"
 alias reef="cd ~/reef"
 alias coral="cd ~/reef/coral"
 alias morse="cd ~/reef/taggers/morse"
-#alias smoke="cd ~/reef/tests/server_smoke"
+alias smoke-reef="cd ~/reef/tests/server_smoke"
 alias phstore="cd ~/reef/utils/phstore"
 
 # personal
