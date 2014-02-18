@@ -26,6 +26,8 @@ alias phstore="cd ~/reef/utils/phstore"
 
 alias finances="cd ~/Software/finances/"
 alias pyboost="cd ~/Documents/pyboost/"
+alias espio="cd ~/Espio/"
+alias espioweb="cd ~/Espio/web/"
 
 # tools
 # -----------------------------------------------------------------
