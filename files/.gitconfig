@@ -1,0 +1,24 @@
+[alias]
+    stat = status
+    statsu = status
+    ci = commit
+    br = branch
+    co = checkout
+    df = diff
+    lg = log -p
+    dev = checkout develop
+    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+    ls = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+    ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+    le = log --oneline --decorate
+    dl = "!git ll -1"
+    dlc = diff --cached HEAD^
+    f = "!git ls-files | grep -i"
+    grep = grep -Ii
+    pull = pull --recursive-submodule
+[push]
+	default = simple
+[core]
+	editor = /usr/bin/vim
+[user]
+	name = Sarat Tallamraju

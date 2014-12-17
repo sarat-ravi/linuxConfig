@@ -3,18 +3,17 @@
 export PATH=$PATH:/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/usr/local/go/bin:/Users/saratt/.rvm/bin
 export PATH=/Users/saratt/Software/bin:$PATH
 
-
 #displays contents after cd'ing into it
-function cd()
-{
-    param=$* 2> /dev/null
-    if $param -eq "" 2> ~/.error_log
-    then
-        builtin cd ~/ 2> ~/.error_log && ls
-    else
-        builtin cd $param && ls
-    fi
-}
+#function cd()
+#{
+    #param=$* 2> /dev/null
+    #if $param -eq "" 2> ~/.error_log
+    #then
+        #builtin cd ~/ 2> ~/.error_log && ls
+    #else
+        #builtin cd $param && ls
+    #fi
+#}
 
 export MARKPATH=$HOME/.marks
 function jump { 
