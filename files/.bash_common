@@ -2,18 +2,7 @@
 # Customize to your needs...
 export PATH=$PATH:/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/git/bin:/usr/local/go/bin:/Users/saratt/.rvm/bin
 export PATH=/Users/saratt/Software/bin:$PATH
-
-#displays contents after cd'ing into it
-#function cd()
-#{
-    #param=$* 2> /dev/null
-    #if $param -eq "" 2> ~/.error_log
-    #then
-        #builtin cd ~/ 2> ~/.error_log && ls
-    #else
-        #builtin cd $param && ls
-    #fi
-#}
+export PATH=$PATH:/Users/saratt/Library/Python/2.7/bin
 
 export MARKPATH=$HOME/.marks
 function jump { 
@@ -32,6 +21,8 @@ function marks {
 if [[ `uname` -eq 'Darwin' ]]
 then
 
+    export GEM_HOME=$HOME/.gem
+    export PATH=$GEM_HOME/bin:$PATH:/Users/saratt/.gem/ruby/2.0.0/bin
     # MAC OSX Specific commands
 
     # NOTE: Uncomment line to activate virtualenv by default
@@ -81,6 +72,8 @@ then
 
     # MacPorts Installer addition on 2012-06-27_at_14:09:41: adding an appropriate PATH variable for use with MacPorts.
     export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+    export PKG_CONFIG_PATH=/opt/local/lib/pkgconfig:/usr/local/lib/pkgconfig:%PKG_CONFIG_PATH
+
     #export PATH=/opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/bin:$PATH
     export PATH=/opt/local/Library/Frameworks/Python.framework/Versions/2.7/bin:$PATH
     # Finished adapting your PATH environment variable for use with MacPorts.
@@ -97,6 +90,8 @@ then
     #if [ -f `brew --prefix`/etc/bash_completion ]; then
     #    . `brew --prefix`/etc/bash_completion
     #fi
+#
+    export PATH=/Users/saratt/Software/OpenBR-0.5.0-osx/bin:$PATH
 
     #up key autocompletes based on history, 
     #bind '"\e[A": history-search-backward'
